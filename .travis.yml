@@ -8,4 +8,4 @@ services:
 before_script: pip install docker
 
 script:
-  - docker run app
+  - docker build -tag app1
