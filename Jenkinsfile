@@ -1,13 +1,8 @@
 node {
- stage('Checkout') {
-    sh 'rm -rf * && git clone https://github.com/Goshaka/broadcom.git'
-  }
-   stage('Build') {
-    sh 'cd broadcom/demo && chmod +x *&& ./mvnw clean install'
-  }
-   stage('Build test') {
-   sh 'cd broadcom/demo && chmod +x *&& ./mvnw test '
-  }
+ //stage('Checkout') {
+ //   sh 'rm -rf * && git clone https://github.com/Goshaka/broadcom.git'
+ // }
+      
   stage('Kill old containers') {
     sh 'if [ `sudo docker ps|wc -l` -ge 2 ];then sudo docker kill `sudo docker ps|grep -v "CONTAINER"|awk \'{print $1}\'`; fi'
    }
