@@ -1,0 +1,11 @@
+language: python
+python:
+  - "2.7"
+# command to install dependencies
+services:
+  - docker
+
+before_script: pip install docker
+
+script:
+  - docker run app
