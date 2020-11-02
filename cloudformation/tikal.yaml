@@ -124,7 +124,7 @@ Resources:
           rpm --import https://pkg.jenkins.io/redhat/jenkins.io.key
           sed -i "s/gpgcheck=1/gpgcheck=0/g" /etc/yum.repos.d/jenkins.repo
           yum install -y jenkins
-          echo 'jenkins ALL=(ALL) NOPASSWD: ALL' >> /etc/sudoer
+          echo 'jenkins ALL=(ALL) NOPASSWD: ALL' >> /etc/sudoers
           echo 'Installing Java'
           yum install -y java-1.8.
           echo 'Starting Jenkins service'
