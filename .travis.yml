@@ -9,5 +9,7 @@ before_script:
   - pip install docker
   - docker build -t app1 .
   - docker run -d -p 80:80 app1
-script:
   - docker ps
+script:
+  - curl http://127.0.0.1
+
