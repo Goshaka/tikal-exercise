@@ -11,5 +11,5 @@ before_script:
   - docker run -d -p 80:80 app1
   - docker ps
 script:
-  - curl http://127.0.0.1
+  - echo 'curl http://127.0.0.1'
 
