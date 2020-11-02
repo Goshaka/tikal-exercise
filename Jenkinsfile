@@ -11,10 +11,10 @@ node {
     sh 'if [ `sudo docker images|grep -v REPOSITORY|grep -v openjdk|wc -l` -gt 0 ];then sudo docker image  rm --force `sudo docker images|grep -v REPOSITORY|grep -v openjdk|awk \'{print $3}\'`; fi'
    }
  stage('Build Docker Image') {
-    sh 'cd ../tikal-exercise@script/application && sudo docker build -t demo .'
+    sh 'cd ../tikal-exercise@script/application && sudo docker build -t demoapplication .'
   }
  stage('Run Docker Container') {
-    sh 'sudo docker run -d  -p 80:8080 demo'
+    sh 'sudo docker run -d  -p 80:80 demoapplication'
   }
   //stage('Test Application') {
    //sh 'curl -f 127.0.0.1'
