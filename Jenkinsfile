@@ -1,7 +1,7 @@
 node {
  stage('Checkout') {
  //   sh 'rm -rf * && git clone https://github.com/Goshaka/broadcom.git'
-     sh 'pwd'
+     sh 'pwd && ls -artl'
  }
       
   stage('Kill old containers') {
