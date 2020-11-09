@@ -1,6 +1,6 @@
 # Tikal exercise 
 
-[![Build Status](https://travis-ci.com/Goshaka/tikal-exercise.svg?branch=main)](https://travis-ci.org/joemccann/dillinger)
+[![Build Status](https://travis-ci.com/Goshaka/tikal-exercise.svg?branch=main)](https://travis-ci.com/Goshaka/tikal-exercise)
 
 # Prerequisites:
  - Ubuntu server (Ubuntu 20.x.x LTS)
