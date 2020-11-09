@@ -76,9 +76,15 @@ Create new pipeline job
 
 Configure new job according to the following screenshots
 
+![git_hook](images/git_hook.png)
+
 ![pp-conf](images/pp-conf.png)
 
 ![run_build](images/run_build.png)
+
+Open docker rest API
+
+![docker_test](images/docker_test.png)
 
 
 
