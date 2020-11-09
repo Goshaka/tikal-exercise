@@ -40,4 +40,5 @@ $  ansible-playbook tikal.yml -e @tikal-vars.yml -e aws_access_key='your_aws_acc
 
 Once the Jenkins server will be created and UP
 Go to AWS console EC2 service and find out instance public IP
+
 ![infrastructure-overview](images/ec2.png)
