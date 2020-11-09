@@ -3,14 +3,14 @@
 [![Build Status](https://travis-ci.com/Goshaka/tikal-exercise.svg?branch=main)](https://travis-ci.org/joemccann/dillinger)
 
 # Prerequisites:
- - Ubuntu server
+ - Ubuntu server (Ubuntu 20.x.x LTS)
  - AWS free tier account
  - AWS default vpc
  - SSH client
  - Browser
-- git clien should be installed on Ubuntu server
-- AWS access & secrets keys should be generated
-- AWS Keys pair with KeyName - "tikal"
+ - git clien should be installed on Ubuntu server
+ - AWS access & secrets keys should be generated
+ - AWS Keys pair with KeyName - "tikal"
 
 
 ### Jenkins installation
