@@ -6,9 +6,11 @@ services:
   - docker
 
 before_script: 
+  - pip install pytest
   - pip install docker
   - docker build -t app1 .
   - docker run -d -p 80:80 app1
 script:
   - docker ps
+  - py.test
 
