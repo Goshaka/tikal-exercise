@@ -14,6 +14,6 @@
       SubnetId: {{SubnetId}}
       ImageId: {{ImageId}}
       InstanceType: {{InstanceType}}
-      YourInternetIP: {{YourInternetIP}}
+      YourInternetIP: "{{YourInternetIP}}/32"
       SSHPort: 22
 
