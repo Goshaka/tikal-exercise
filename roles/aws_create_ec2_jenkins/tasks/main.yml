@@ -1,0 +1,19 @@
+- name: launch ansible cloudformation example
+  cloudformation:
+    stack_name: "tikal-jenkins"
+    state: "present"
+    region: "us-east-1"
+    disable_rollback: true
+    aws_access_key: 'AKIA4DGTBFMN2262V5JR'
+    aws_secret_key: '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'
+    template: "roles/aws_create_ec2_jenkins/files/tikal.yaml"
+    template_parameters:
+      KeyName: "tikal"
+      EnvironmentName: "tikal"
+      Vpc: vpc-491df834
+      SubnetId: subnet-712bfc50
+      ImageId: ami-02d096b4878c881c0
+      InstanceType: t2.micro
+      AllowedCidrBlock: 192.114.148.0/22
+      SSHPort: 22
+
