@@ -39,7 +39,7 @@ $  ansible-playbook tikal.yml -e @tikal-vars.yml -e aws_access_key='your_aws_acc
 
 ### Jenkins pipeline creation
 
-Once the Jenkins server will be created and UP
+After the Jenkins server will be created and UP
 Go to AWS console EC2 service and find out instance public IP
 
 ![ec2_ip](images/ec2.png)
@@ -64,7 +64,7 @@ Login to jenkins
 Create new user
 ![jn-user](images/jn_user.png)
 
-![jn-page](images/jn_page.png)
+![unloc_jenkins](images/unlock_jenkins.png)
 
 Install suggested plugins
 
