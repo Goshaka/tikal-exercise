@@ -1,19 +1,20 @@
 - name: launch ansible cloudformation example
   cloudformation:
-    stack_name: {{stack_name}}
+    stack_name: "{{stackname}}"
     state: "present"
-    region: {{region}}
+    region: "{{region}}"
     disable_rollback: true
-    aws_access_key: {{aws_access_key}}
-    aws_secret_key: {{aws_secret_key}}
+    aws_access_key: "{{aws_access_key}}"
+    aws_secret_key: "{{aws_secret_key}}"
     template: "roles/aws_create_ec2_jenkins/files/tikal.yaml"
     template_parameters:
-      KeyName: {{KeyName}}
-      ServerName: {{ServerName}}
-      Vpc: {{Vpc}}
-      SubnetId: {{SubnetId}}
-      ImageId: {{ImageId}}
-      InstanceType: {{InstanceType}}
+      KeyName: "{{KeyName}}"
+      ServerName: "{{ServerName}}"
+      Vpc: "{{Vpc}}"
+      SubnetId: "{{SubnetId}}"
+      ImageId: "{{ImageId}}"
+      InstanceType: "{{InstanceType}}"
       YourInternetIP: "{{YourInternetIP}}/32"
-      SSHPort: 22
-
+      SSHPort: "{{SSHPort}}"
+      JenkinsPort: "{{JenkinsPort}}"
+      App1Port: "{{App1Port}}"

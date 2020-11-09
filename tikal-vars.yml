@@ -1,12 +1,16 @@
+stackname: tikalexercise
 aws_access_key: ''
 aws_secret_key: ''
-template: "roles/aws_create_ec2_jenkins/files/tikal.yaml"
+region: us-east-1
+template: roles/aws_create_ec2_jenkins/files/tikal.yaml
 template_parameters:
-KeyName: "tikal"
-ServerName: "tikal"
+KeyName: tikal
+ServerName: tikal
 Vpc: vpc-491df834
 SubnetId: subnet-712bfc50
 ImageId: ami-02d096b4878c881c0
 InstanceType: t2.micro
 YourInternetIP: ''
 SSHPort: 22
+JenkinsPort: 8080
+App1Port: 80

@@ -11,12 +11,12 @@ Parameters:
   Vpc:
     Type: AWS::EC2::VPC::Id
     Description: The VPC to which the server is deployed
-    # Default: vpc-491df834
+
 
   SubnetId:
     Type: AWS::EC2::Subnet::Id
     Description: Subnet in which to deploy the server
-    # Default: subnet-712bfc50
+
 
 
   KeyName:
@@ -26,7 +26,6 @@ Parameters:
 
   ImageId:
     Type:  String
-    # Default: ami-02d096b4878c881c0
     Description: AMI ID, defaulting to the latest Amazon ECS-Optimized AMI (linux) for the region
 
   InstanceType:
@@ -35,7 +34,7 @@ Parameters:
 
   YourInternetIP:
     Type: String
-    Description: IP range (CIDR notation) for the address(es) that will be allowed to remotely access the web services
+    Description: Your external IPAddress
 
 
   SSHPort:
@@ -43,6 +42,15 @@ Parameters:
     Description:  Port for SSH connection
     Default: 22
 
+  JenkinsPort:
+    Type: String
+    Description:  Port for SSH connection
+    Default: 22
+
+  App1Port:
+    Type: String
+    Description:  Port for SSH connection
+    Default: 22
 
 Resources:
  
@@ -58,24 +66,18 @@ Resources:
           IpProtocol: tcp
           FromPort: !Ref SSHPort
           ToPort: !Ref SSHPort
+
         - CidrIp:  !Ref YourInternetIP
-          Description: HTTPS/SSH access 
+          Description: Port 8080 access 
           IpProtocol: tcp
-          FromPort: 443
-          ToPort: 443
+          FromPort: !Ref JenkinsPort
+          ToPort: !Ref JenkinsPort
+
         - CidrIp:  !Ref YourInternetIP
-          Description: HTTPS/SSH access 
+          Description: Port 80
           IpProtocol: tcp
-          FromPort: 8080
-          ToPort: 8080
-        - CidrIp:  !Ref YourInternetIP
-          Description: HTTPS/SSH access 
-          IpProtocol: tcp
-          FromPort: 80
-          ToPort: 80
-        Tags:
-        - Key: Name
-          Value: !Sub ${ServerName} Tikal Security Group Port
+          FromPort: !Ref App1Port
+          ToPort: !Ref App1Port
 
   TikalEc2Role:
     Type: AWS::IAM::Role
