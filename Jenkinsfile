@@ -1,6 +1,6 @@
 node {
  stage('Checkout') {
- //   sh 'rm -rf * && git clone https://github.com/Goshaka/broadcom.git'
+    sh 'rm -rf * && git clone https://github.com/Goshaka/tikal-exercise.git'
      sh 'pwd && ls -artl;cd ../ && find . -type f'
  }
       
