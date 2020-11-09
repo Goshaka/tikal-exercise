@@ -7,6 +7,7 @@ services:
 
 before_script: 
   - pip install pytest
+  - pip install pytest-flask
   - pip install docker
   - pip install flask
   - docker build -t app1 .
