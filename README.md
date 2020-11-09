@@ -10,6 +10,7 @@
  - Browser
 - git clien should be installed on Ubuntu server
 - AWS access & secrets keys should be generated
+- AWS Keys pair with KeyName - "tikal"
 
 
 ### Jenkins installation
@@ -42,3 +43,7 @@ Once the Jenkins server will be created and UP
 Go to AWS console EC2 service and find out instance public IP
 
 ![infrastructure-overview](images/ec2.png)
+
+Open chrome browser or other one and put into address bar <Jenkins Instance public IP>:8080
+ 
+![infrastructure-overview](images/jn_login.png)
