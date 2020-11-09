@@ -1,5 +1,5 @@
-aws_access_key: '111AKIA4DGTBFMN2262V5JR'
-aws_secret_key: '111Yast92HnzJSakvRGNqi6GCwUV8SlDqJV4iHPwAXJ'
+aws_access_key: ''
+aws_secret_key: ''
 template: "roles/aws_create_ec2_jenkins/files/tikal.yaml"
 template_parameters:
 KeyName: "tikal"
