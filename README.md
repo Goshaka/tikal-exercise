@@ -85,6 +85,8 @@ Configure new job according to the following screenshots
 
 ![git_hook](images/git_hook.png)
 
+Put git https url "https://github.com/Goshaka/tikal-exercise.git" into "Repository Url" field 
+
 ![pp-conf](images/pp-conf.png)
 
 ![run_build](images/run_build.png)
