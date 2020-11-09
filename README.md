@@ -62,7 +62,7 @@ Login to jenkins
 ![jn-login](images/jn_login.png)
 
 Create new user
-![jn-page](images/jn_page.png)
+![jn-user](images/jn_user.png)
 
 ![jn-page](images/jn_page.png)
 
@@ -73,6 +73,13 @@ Install suggested plugins
 Create new pipeline job
 
 ![new_job](images/new_job.png)
+
+Configure new job according to the following screenshots
+
+![pp-conf](images/pp-conf.png)
+
+![run_build](images/run_build.png)
+
 
 
 
