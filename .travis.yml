@@ -14,5 +14,4 @@ before_script:
   - docker run -d -p 80:80 app1
 script:
   - docker ps
-  - py.test
 
