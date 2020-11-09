@@ -47,3 +47,17 @@ Go to AWS console EC2 service and find out instance public IP
 Open chrome browser or other one and put into address bar <Jenkins Instance public IP>:8080
  
 ![jn-login](images/jn_login.png)
+
+Login by ssh to jenkins ec2 instace 
+
+```sh
+$   ssh -i <pem file location>/tikal.pem ec2-user@54.85.133.174
+$   sudo cat /var/lib/jenkins/secrets/initialAdminPassword
+```
+![jn-pass](images/jn_pass.png)
+
+Copy output of the "cat" command and put to Jenkins login page
+
+![jn-pass](images/jn_page.png)
+
+
