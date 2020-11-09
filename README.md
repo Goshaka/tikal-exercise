@@ -58,8 +58,21 @@ $   sudo cat /var/lib/jenkins/secrets/initialAdminPassword
 
 Copy output of the "cat" command and put to Jenkins login page
 
-![jn-pass](images/jn_page.png)
+Login to jenkins
+![jn-login](images/jn_login.png)
 
-![jn-pass](images/jn_plugin.png)
+Create new user
+![jn-page](images/jn_page.png)
+
+![jn-page](images/jn_page.png)
+
+Install suggested plugins
+
+![jn-plugin](images/jn_plugin.png)
+
+Create new pipeline job
+
+![new_job](images/new_job.png)
+
 
 
