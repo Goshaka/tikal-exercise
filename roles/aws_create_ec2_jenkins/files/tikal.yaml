@@ -4,40 +4,39 @@ Description: >
   Tikal 
 
 Parameters:
-  EnvironmentName:
+  ServerName:
     Type: String
     Description: An environment name that will be prefixed to resource names
 
   Vpc:
     Type: AWS::EC2::VPC::Id
     Description: The VPC to which the server is deployed
-    Default: vpc-491df834
+    # Default: vpc-491df834
 
   SubnetId:
     Type: AWS::EC2::Subnet::Id
     Description: Subnet in which to deploy the server
-    Default: subnet-712bfc50
+    # Default: subnet-712bfc50
 
 
   KeyName:
     Type: AWS::EC2::KeyPair::KeyName
     Description: Name of key pair to allow SSH access to the Tikal server
-    Default: tikal
+    # Default: tikal
 
   ImageId:
     Type:  String
-    Default: ami-02d096b4878c881c0
+    # Default: ami-02d096b4878c881c0
     Description: AMI ID, defaulting to the latest Amazon ECS-Optimized AMI (linux) for the region
 
   InstanceType:
     Type: String
-    Default: t2.micro
-    Description: ECS EC2 instance type
 
-  AllowedCidrBlock:
+
+  YourInternetIP:
     Type: String
     Description: IP range (CIDR notation) for the address(es) that will be allowed to remotely access the web services
-    Default: 192.114.148.0/22
+
 
   SSHPort:
     Type: String
@@ -54,25 +53,35 @@ Resources:
       GroupDescription: SSH access to the Tikal server over specific port
       SecurityGroupIngress:
         #Allow ssh access from a specified block of addresses
-        - CidrIp: !Ref AllowedCidrBlock
+        - CidrIp: !Ref YourInternetIP
           Description: SSH access to the Tikal server
           IpProtocol: tcp
           FromPort: !Ref SSHPort
           ToPort: !Ref SSHPort
-        - CidrIp:  !Ref AllowedCidrBlock
+        - CidrIp:  !Ref YourInternetIP
           Description: HTTPS/SSH access 
           IpProtocol: tcp
           FromPort: 443
           ToPort: 443
-      Tags:
+        - CidrIp:  !Ref YourInternetIP
+          Description: HTTPS/SSH access 
+          IpProtocol: tcp
+          FromPort: 8080
+          ToPort: 8080
+        - CidrIp:  !Ref YourInternetIP
+          Description: HTTPS/SSH access 
+          IpProtocol: tcp
+          FromPort: 80
+          ToPort: 80
+        Tags:
         - Key: Name
-          Value: !Sub ${EnvironmentName} Tikal Security Group Port
+          Value: !Sub ${ServerName} Tikal Security Group Port
 
   TikalEc2Role:
     Type: AWS::IAM::Role
     Properties:
       Path: /
-      RoleName: !Sub ${EnvironmentName}-Tikal-ec2-role-${AWS::Region}
+      RoleName: !Sub ${ServerName}-Tikal-ec2-role-${AWS::Region}
       AssumeRolePolicyDocument:
         Statement:
           - Action: sts:AssumeRole
@@ -84,7 +93,7 @@ Resources:
   TikalHostPolicy:
     Type: AWS::IAM::Policy
     Properties:
-      PolicyName: !Sub ${EnvironmentName}-Tikal-host-policy
+      PolicyName: !Sub ${ServerName}-Tikal-host-policy
       Roles:
         - !Ref TikalEc2Role
       PolicyDocument:
@@ -134,7 +143,7 @@ Resources:
           
       Tags:
         - Key: Name
-          Value: !Sub ${EnvironmentName}-Tikal-server
+          Value: !Sub ${ServerName}-Tikal-server
 
 
 

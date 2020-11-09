@@ -3,10 +3,10 @@ aws_secret_key: ''
 template: "roles/aws_create_ec2_jenkins/files/tikal.yaml"
 template_parameters:
 KeyName: "tikal"
-EnvironmentName: "tikal"
+ServerName: "tikal"
 Vpc: vpc-491df834
 SubnetId: subnet-712bfc50
 ImageId: ami-02d096b4878c881c0
 InstanceType: t2.micro
-AllowedCidrBlock: 192.114.148.0/22
+YourInternetIP: ''
 SSHPort: 22
