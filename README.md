@@ -60,4 +60,6 @@ Copy output of the "cat" command and put to Jenkins login page
 
 ![jn-pass](images/jn_page.png)
 
+![jn-pass](images/jn_plugin.png)
+
 
