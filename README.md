@@ -70,7 +70,7 @@ Install suggested plugins
 
 ![jn-plugin](images/jn_plugin.png)
 
-Create new pipeline job
+Create the Jenkins Pipeline Job
 
 ![new_job](images/new_job.png)
 
