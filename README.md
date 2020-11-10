@@ -8,7 +8,7 @@
  - AWS default vpc
  - SSH client
  - Browser
- - git clien should be installed on Ubuntu server
+ - git client should be installed on Ubuntu server
  - AWS access & secrets keys should be generated
  - AWS Keys pair with KeyName - "tikal"
 
@@ -30,7 +30,7 @@ Download exercise solution files from github
 $  git clone https://github.com/Goshaka/tikal-exercise.git  
 ```
 
-Create jenkins ec2 server buy execute ansible playbook tikal.yml 
+Create jenkins ec2 server by execute ansible playbook tikal.yml 
 
 ```sh
 $  cd tikal-exercise/  
