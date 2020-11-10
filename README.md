@@ -51,8 +51,9 @@ Open chrome browser or other one and put into address bar <Jenkins Instance publ
 Login by ssh to jenkins ec2 instace 
 
 ```sh
-$   ssh -i <pem file location>/tikal.pem ec2-user@54.85.133.174
-$   sudo cat /var/lib/jenkins/secrets/initialAdminPassword
+
+$   ssh -i <pem file location>/tikal.pem ec2-user@54.85.133.174 "sudo cat /var/lib/jenkins/secrets/initialAdminPassword"
+
 ```
 ![jn-pass](images/jn_pass.png)
 
