@@ -9,3 +9,5 @@ def hello():
            "<b>Docker App1</b> <br/>"
     return 'Docker, App1!'
 
+if __name__ == "__main__":
+    app.run(host='0.0.0.0', port=80)
